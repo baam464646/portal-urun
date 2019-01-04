@@ -1,34 +1,30 @@
 <?php
-
 use yii\helpers\Html;
 use yii\grid\GridView;
-
 /* @var $this yii\web\View */
-/* @var $searchModel kouosl\Urun\models\Urun_TipiSearch */
+/* @var $searchModel kouosl\Urun\models\YemeklistSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-
-$this->title = 'Urun  Tipis';
+$this->title = 'Urun Listesi';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="urun--tipi-index">
+<div class="urun-list-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Urun  Tipi', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
+     //  'filterModel' => $searchModel,
+      /*  'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'ID',
-            'Tipi',
-
+			'ID',
+            'Urun_ID',
+			'Stock_ID'
+			'Stock_Sayisi'
+            'Urun_Tipi'
             ['class' => 'yii\grid\ActionColumn'],
-        ],
+        ],*/
     ]); ?>
+
+    
 </div>
