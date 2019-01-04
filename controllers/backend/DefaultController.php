@@ -1,11 +1,11 @@
 <?php
-namespace kouosl\Urun\controllers\api;
+namespace kouosl\Urun\controllers\backend;
 
 
 /**
  * Default controller for the `Urun` module
  */
-class DefaultController extends \kouosl\base\controllers\api\BaseController
+class DefaultController extends \kouosl\base\controllers\backend\BaseController
 {
     /**
      * Renders the index view for the module

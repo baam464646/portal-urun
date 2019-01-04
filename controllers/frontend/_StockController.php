@@ -1,11 +1,10 @@
 <?php
+
 namespace kouosl\Urun\controllers\frontend;
-/**
- * Default controller for the `Urun` module
- */
-class StockController extends \kouosl\base\controllers\frontend\BaseController
+
+class _StockController extends \BaseController
 {
-    /**
+     /**
      * Renders the index view for the module
      * @return string
      */
