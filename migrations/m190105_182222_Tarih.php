@@ -3,22 +3,20 @@
 use yii\db\Migration;
 
 /**
- * Class m190103_202534_UrunList2
+ * Class m190105_182222_Tarih
  */
-class m190103_202534_UrunList2 extends Migration
+class m190105_182222_Tarih extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-	$this->createTable('UrunList2', [
+	$this->createTable('Tarih', [
 			'ID' => $this->integer(),
-            'Urun_ID' => $this->integer(),
-            'Stock_ID' => $this->integer(),
-			'Stock_Sayisi' => $this->integer(),
-            'Urun_Tipi' => $this->string(30),,
-            'PRIMARY KEY(ID)',
+            'Uretim_Tarihi' => $this->DATETIME()->notNull(),
+			'Son_Kullanma_Tarihi' => $this->DATETIME()->notNull(),
+            'PRIMARY KEY(ID)'
         ]);
     }
 
@@ -27,7 +25,7 @@ class m190103_202534_UrunList2 extends Migration
      */
     public function safeDown()
     {
-        echo "m190103_202534_UrunList2 cannot be reverted.\n";
+        echo "m190105_182222_Tarih cannot be reverted.\n";
 
         return false;
     }
@@ -41,7 +39,7 @@ class m190103_202534_UrunList2 extends Migration
 
     public function down()
     {
-        echo "m190103_202534_UrunList2 cannot be reverted.\n";
+        echo "m190105_182222_Tarih cannot be reverted.\n";
 
         return false;
     }
