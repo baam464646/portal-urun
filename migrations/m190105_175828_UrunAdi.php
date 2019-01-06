@@ -21,13 +21,17 @@ class m190105_175828_UrunAdi extends Migration
         ]);
     }
 
+	public function safeDown()
+    {
+		$this->dropTable('UrunAdi');
+    }
+	
     /**
      * {@inheritdoc}
      */
     public function safeDown()
     {
         echo "m190105_175828_UrunAdi cannot be reverted.\n";
-
         return false;
     }
 

@@ -18,14 +18,18 @@ class m190105_175839_Stock extends Migration
             'PRIMARY KEY(ID)'
         ]);
     }
-
+	
+	public function safeDown()
+    {
+		$this->dropTable('Stock');
+    }
+	
     /**
      * {@inheritdoc}
      */
     public function safeDown()
     {
         echo "m190105_175839_Stock cannot be reverted.\n";
-
         return false;
     }
 

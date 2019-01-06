@@ -19,14 +19,16 @@ class m190105_182222_Tarih extends Migration
             'PRIMARY KEY(ID)'
         ]);
     }
-
+	public function safeDown()
+    {
+		$this->dropTable('Tarih');
+    }
     /**
      * {@inheritdoc}
      */
     public function safeDown()
     {
         echo "m190105_182222_Tarih cannot be reverted.\n";
-
         return false;
     }
 

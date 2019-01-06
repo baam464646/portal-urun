@@ -19,13 +19,17 @@ class m190105_175822_UrunTipi extends Migration
         ]);
     }
 
+	public function safeDown()
+    {
+		$this->dropTable('UrunTipi');
+    }
+	
     /**
      * {@inheritdoc}
      */
     public function safeDown()
     {
         echo "m190105_175822_UrunTipi cannot be reverted.\n";
-
         return false;
     }
 

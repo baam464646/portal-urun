@@ -24,13 +24,17 @@ class m190105_175813_UrunList extends Migration
         ]);
     }
 
+	 public function safeDown()
+    {
+		$this->dropTable('UrunList');
+    }
+	
     /**
      * {@inheritdoc}
      */
     public function safeDown()
     {
         echo "m190105_175813_UrunList cannot be reverted.\n";
-
         return false;
     }
 
